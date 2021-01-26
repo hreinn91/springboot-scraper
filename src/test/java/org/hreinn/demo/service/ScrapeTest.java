@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 @Slf4j
 @SpringBootTest
@@ -17,6 +18,8 @@ public class ScrapeTest {
 
   @Test
   public void scrapeTest() throws IOException {
-    // This test creates a scraperService. Logic is in the constructor.
+    HashMap<String, String> jobDescription = scraperService.getJobDescription();
+    log.info("Done");
   }
+
 }
